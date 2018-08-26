@@ -28,21 +28,23 @@ export default {
   },
   methods:{
     denglu(){
-      if(this.user ==''|| this.pwd == '' ) {
-        return false;
-      }
+      // 发送请求
+      // if(this.user ==''|| this.pwd == '' ) {
+      //   return false;
+      // }
       //ajax
-      this.axios({
-        methods:'post',
-        url:'',
-        params:{
-          name:this.user,
-          pass:this.pwd,
-        }
-      }).then((res)=>{
-        //写后台返回的东西
-      })
-
+      // this.axios({
+      //   methods:'post',
+      //   url:'',
+      //   params:{
+      //     name:this.user,
+      //     pass:this.pwd,
+      //   }
+      // }).then((res)=>{
+      //   //写后台返回的东西
+      // })
+      this.bus.$emit('changearr',[1,2,3,4]);
+      this.$router.push('/demo');
     }
   }
 }
